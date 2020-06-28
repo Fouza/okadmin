@@ -39,25 +39,25 @@ class DefaultAside extends Component {
         <Nav tabs>
           <NavItem>
             <NavLink className={classNames({ active: this.state.activeTab === '1' })}
-                     onClick={() => {
-                       this.toggle('1');
-                     }}>
+              onClick={() => {
+                this.toggle('1');
+              }}>
               <i className="icon-list"></i>
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink className={classNames({ active: this.state.activeTab === '2' })}
-                     onClick={() => {
-                       this.toggle('2');
-                     }}>
+              onClick={() => {
+                this.toggle('2');
+              }}>
               <i className="icon-speech"></i>
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink className={classNames({ active: this.state.activeTab === '3' })}
-                     onClick={() => {
-                       this.toggle('3');
-                     }}>
+              onClick={() => {
+                this.toggle('3');
+              }}>
               <i className="icon-settings"></i>
             </NavLink>
           </NavItem>
@@ -162,7 +162,7 @@ class DefaultAside extends Component {
               </div>
               <div className="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
               <small className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt...
+              tempor incididunt...
               </small>
             </div>
             <hr />
@@ -179,7 +179,7 @@ class DefaultAside extends Component {
               </div>
               <div className="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
               <small className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt...
+              tempor incididunt...
               </small>
             </div>
             <hr />
@@ -196,7 +196,7 @@ class DefaultAside extends Component {
               </div>
               <div className="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
               <small className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt...
+              tempor incididunt...
               </small>
             </div>
             <hr />
@@ -213,7 +213,7 @@ class DefaultAside extends Component {
               </div>
               <div className="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
               <small className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt...
+              tempor incididunt...
               </small>
             </div>
             <hr />
@@ -230,7 +230,7 @@ class DefaultAside extends Component {
               </div>
               <div className="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
               <small className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt...
+              tempor incididunt...
               </small>
             </div>
           </TabPane>
@@ -240,11 +240,11 @@ class DefaultAside extends Component {
             <div className="aside-options">
               <div className="clearfix mt-4">
                 <small><b>Option 1</b></small>
-                <AppSwitch className={'float-right'} variant={'pill'} label color={'success'} defaultChecked size={'sm'}/>
+                <AppSwitch className={'float-right'} variant={'pill'} label color={'success'} defaultChecked size={'sm'} />
               </div>
               <div>
                 <small className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua.
+                tempor incididunt ut labore et dolore magna aliqua.
                 </small>
               </div>
             </div>
@@ -252,11 +252,11 @@ class DefaultAside extends Component {
             <div className="aside-options">
               <div className="clearfix mt-3">
                 <small><b>Option 2</b></small>
-                <AppSwitch className={'float-right'} variant={'pill'} label color={'success'} size={'sm'}/>
+                <AppSwitch className={'float-right'} variant={'pill'} label color={'success'} size={'sm'} />
               </div>
               <div>
                 <small className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua.
+                tempor incididunt ut labore et dolore magna aliqua.
                 </small>
               </div>
             </div>
@@ -264,7 +264,7 @@ class DefaultAside extends Component {
             <div className="aside-options">
               <div className="clearfix mt-3">
                 <small><b>Option 3</b></small>
-                <AppSwitch className={'float-right'} variant={'pill'} label color={'success'} defaultChecked size={'sm'} disabled/>
+                <AppSwitch className={'float-right'} variant={'pill'} label color={'success'} defaultChecked size={'sm'} disabled />
                 <div>
                   <small className="text-muted">Option disabled.</small>
                 </div>

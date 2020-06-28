@@ -23,6 +23,12 @@ const ButtonGroups = React.lazy(() => import('./views/Buttons/ButtonGroups'));
 const Buttons = React.lazy(() => import('./views/Buttons/Buttons'));
 const Charts = React.lazy(() => import('./views/Charts'));
 const Dashboard = React.lazy(() => import('./views/Dashboard'));
+const Exercise = React.lazy(() => import('./views/Exercise'));
+const AddCategorieExercise = React.lazy(() => import('./views/Exercise/AddCategorieExercise'));
+const Food = React.lazy(() => import('./views/Food'));
+const AddCategorieFood = React.lazy(() => import('./views/Food/AddCategorieFood'));
+
+
 const CoreUIIcons = React.lazy(() => import('./views/Icons/CoreUIIcons'));
 const Flags = React.lazy(() => import('./views/Icons/Flags'));
 const FontAwesome = React.lazy(() => import('./views/Icons/FontAwesome'));
@@ -35,11 +41,16 @@ const Typography = React.lazy(() => import('./views/Theme/Typography'));
 const Widgets = React.lazy(() => import('./views/Widgets/Widgets'));
 const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
+const Login = React.lazy(() => import('./views/Pages/Login'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
-  { path: '/', exact: true, name: 'Home' },
-  { path: '/dashboard', name: 'Dashboard', component: Dashboard },
+  { path: '/', exact: true, name: 'Login', component: Login },
+  { path: '/exercise', name: 'Exercise', component: Exercise },
+  { path: '/addcatexo/:cat_id/:name', exact: true, name: 'Ajout de catégorie', component: AddCategorieExercise },
+  { path: '/food', name: 'Food', component: Food },
+  { path: '/addcatfood/:cat_id/:name', exact: true, name: 'Ajout de catégorie', component: AddCategorieFood },
+  { path: '/dashboard', exact: true, name: 'Dashboard', component: Dashboard },
   { path: '/theme', exact: true, name: 'Theme', component: Colors },
   { path: '/theme/colors', name: 'Colors', component: Colors },
   { path: '/theme/typography', name: 'Typography', component: Typography },
@@ -77,7 +88,7 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', component: Modals },
   { path: '/widgets', name: 'Widgets', component: Widgets },
   { path: '/charts', name: 'Charts', component: Charts },
-  { path: '/users', exact: true,  name: 'Users', component: Users },
+  { path: '/users', exact: true, name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
 ];
 

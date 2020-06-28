@@ -1,6 +1,17 @@
 export default {
   items: [
     {
+      name: 'Exercise',
+      url: '/exercise',
+      icon: 'icon-speedometer',
+    },
+    {
+      name: 'Food',
+      url: '/food',
+      icon: 'icon-speedometer',
+
+    },
+    {
       name: 'Dashboard',
       url: '/dashboard',
       icon: 'icon-speedometer',
