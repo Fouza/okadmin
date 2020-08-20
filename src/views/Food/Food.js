@@ -116,7 +116,7 @@ class Food extends Component {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     }
-    await axios.get(`http://127.0.0.1:888/api/service/categoriesFood/listCategoriesFood`,
+    await axios.get(`http://ef0c96339a16.ngrok.io/api/service/categoriesFood/listCategoriesFood`,
       config).then(
         res => {
           //console.log(res.data)
@@ -139,7 +139,7 @@ class Food extends Component {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     }
-    await axios.post(`http://127.0.0.1:888/api/service/catgeorieFood/addCategoryFood`,
+    await axios.post(`http://ef0c96339a16.ngrok.io/api/service/catgeorieFood/addCategoryFood`,
       {
         "name": this.state.name,
         "description": this.state.description,
@@ -170,7 +170,7 @@ class Food extends Component {
     }
     //console.log(id);
     //console.log(index);
-    await axios.delete(`http://127.0.0.1:888/api/service/catgeorieFood/deleteCategoryFood/${id}`,
+    await axios.delete(`http://ef0c96339a16.ngrok.io/api/service/catgeorieFood/deleteCategoryFood/${id}`,
       config).then(
         res => {
           //console.log(res.data)
@@ -197,7 +197,7 @@ class Food extends Component {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     }
-    await axios.put(`http://127.0.0.1:888/api/service/catgeorieFood/updateCategoryFood/${this.state.cat_id}`,
+    await axios.put(`http://ef0c96339a16.ngrok.io/api/service/catgeorieFood/updateCategoryFood/${this.state.cat_id}`,
       {
         name: this.state.nameModif,
         description: this.state.descriptionModif,

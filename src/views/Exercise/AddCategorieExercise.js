@@ -97,7 +97,7 @@ class AddCategorieExercise extends Component {
       "image": this.state.image,
       "name": this.state.name
     })
-    await axios.post(`http://127.0.0.1:888/api/service/category/${this.props.match.params.cat_id}/addExercise`,
+    await axios.post(`http://ef0c96339a16.ngrok.io/api/service/category/${this.props.match.params.cat_id}/addExercise`,
       {
         "caloriesBurned": this.state.caloriesBurned,
         "duration": this.state.duration,

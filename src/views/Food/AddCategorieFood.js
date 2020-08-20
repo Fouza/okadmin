@@ -91,7 +91,7 @@ class AddCategorieFood extends Component {
       }
     }
     console.log(this.state);
-    await axios.post(`http://127.0.0.1:888/api/service/category/${this.props.match.params.cat_id}/addFood`,
+    await axios.post(`http://ef0c96339a16.ngrok.io/api/service/category/${this.props.match.params.cat_id}/addFood`,
       {
         "calories": this.state.caloriesBurned,
         "image": this.state.image,
