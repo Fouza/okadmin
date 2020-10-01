@@ -46,13 +46,15 @@ const UserDetail = React.lazy(() => import('./views/UserDetail'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
-  { path: '/', exact: true, name: 'Login', component: Login },
+  { path: '/', exact: true, name: ' ', component: Login },
   { path: '/user/detail', exact: true, name: 'User Detail', component: UserDetail },
   { path: '/exercise', name: 'Exercise', component: Exercise },
-  { path: '/addcatexo/:cat_id/:name', exact: true, name: 'Ajout de catégorie', component: AddCategorieExercise },
+  { path: '/addcatexo/:cat_id/:name', exact: true, name: 'Ajout d\'exercise', component: AddCategorieExercise },
   { path: '/food', name: 'Food', component: Food },
-  { path: '/addcatfood/:cat_id/:name', exact: true, name: 'Ajout de catégorie', component: AddCategorieFood },
-  { path: '/dashboard', exact: true, name: 'Dashboard', component: Dashboard },
+  {
+    path: '/addcatfood/:cat_id/:name', exact: true, name: 'Ajout d\'aliment', component: AddCategorieFood
+  },
+  { path: '/dashboard', exact: true, name: 'Utilisateurs', component: Dashboard },
   { path: '/theme', exact: true, name: 'Theme', component: Colors },
   { path: '/theme/colors', name: 'Colors', component: Colors },
   { path: '/theme/typography', name: 'Typography', component: Typography },

@@ -115,7 +115,7 @@ class Exercise extends Component {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     }
-    await axios.get(`http://ef0c96339a16.ngrok.io/api/service/categorieExercise/listCategoriesExercises`,
+    await axios.get(`http://c4216fbecb77.ngrok.io/api/service/categorieExercise/listCategoriesExercises`,
       config).then(
         res => {
           //console.log(res.data)
@@ -138,7 +138,7 @@ class Exercise extends Component {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     }
-    await axios.post(`http://ef0c96339a16.ngrok.io/api/service/categorieExercise/addCaetgoryExercise`,
+    await axios.post(`http://c4216fbecb77.ngrok.io/api/service/categorieExercise/addCaetgoryExercise`,
       {
         "name": this.state.name,
         "description": this.state.description,
@@ -167,7 +167,7 @@ class Exercise extends Component {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     }
-    await axios.delete(`http://ef0c96339a16.ngrok.io/api/service/categorieExercise/deleteCategoryExercise/${id}`,
+    await axios.delete(`http://c4216fbecb77.ngrok.io/api/service/categorieExercise/deleteCategoryExercise/${id}`,
       config).then(
         res => {
           //console.log(res.data)
@@ -194,7 +194,7 @@ class Exercise extends Component {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     }
-    await axios.put(`http://ef0c96339a16.ngrok.io/api/service/categorieExercise/updateCategoryExercise/${this.state.cat_id}`,
+    await axios.put(`http://c4216fbecb77.ngrok.io/api/service/categorieExercise/updateCategoryExercise/${this.state.cat_id}`,
       {
         name: this.state.nameModif,
         description: this.state.descriptionModif,

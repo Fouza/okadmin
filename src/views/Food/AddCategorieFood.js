@@ -19,7 +19,9 @@ import {
   Progress,
   Row,
   Table,
-  FormGroup, Label, Input
+  FormGroup, Label, Input,
+  ListGroup, ListGroupItem
+
 } from 'reactstrap';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
@@ -48,7 +50,8 @@ class AddCategorieFood extends Component {
       caloriesBurned: 0,
       duration: 0,
       image: '',
-      name: ''
+      name: '',
+      list: []
     }
   }
 
@@ -79,6 +82,10 @@ class AddCategorieFood extends Component {
     })*/
   }
 
+  componentDidMount() {
+    this.getCategorieExercises()
+  }
+
   async addExoToCategory() {
     let config = {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -91,7 +98,7 @@ class AddCategorieFood extends Component {
       }
     }
     console.log(this.state);
-    await axios.post(`http://ef0c96339a16.ngrok.io/api/service/category/${this.props.match.params.cat_id}/addFood`,
+    await axios.post(`http://c4216fbecb77.ngrok.io/api/service/category/${this.props.match.params.cat_id}/addFood`,
       {
         "calories": this.state.caloriesBurned,
         "image": this.state.image,
@@ -121,6 +128,29 @@ class AddCategorieFood extends Component {
       config).then(
         res => {
           console.log(res);
+          window.location.reload(true)
+        }
+      );
+  }
+
+  async getCategorieExercises() {
+    let config = {
+      method: 'GET', // *GET, POST, PUT, DELETE, etc.
+      mode: 'no-cors', // no-cors, *cors, same-origin
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-type': 'application/json',
+        'Retry-After': 600,
+        'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    }
+    await axios.get(`http://c4216fbecb77.ngrok.io/api/service/food/listeFoodByCategory?category=${this.props.match.params.name}`,
+      config).then(
+        res => {
+          console.log(res.data)
+
+          this.setState({ list: res.data })
         }
       );
   }
@@ -132,7 +162,7 @@ class AddCategorieFood extends Component {
 
 
   render() {
-    //console.log(this.props.match.params.name);
+    console.log(this.props.match.params.name);
     return (
       <div className="animated fadeIn">
         <Row>
@@ -164,6 +194,21 @@ class AddCategorieFood extends Component {
               <CardFooter>
                 <Button type="submit" size="sm" color="primary" onClick={this.handleAjouter} ><i className="fa fa-dot-circle-o"></i> Ajouter</Button>
               </CardFooter>
+            </Card>
+          </Col>
+          <Col xl="4" xs="12">
+            <Card>
+              <CardHeader>List des exercices</CardHeader>
+              <CardBody>
+                <ListGroup>
+                  {this.state.list.map((data) => {
+                    return (
+                      <ListGroupItem>{data.detailfood.name} </ListGroupItem>
+                    )
+                  })}
+                  <ListGroupItem></ListGroupItem>
+                </ListGroup>
+              </CardBody>
             </Card>
           </Col>
         </Row>
