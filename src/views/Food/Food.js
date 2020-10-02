@@ -168,8 +168,7 @@ class Food extends Component {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     }
-    //console.log(id);
-    //console.log(index);
+
     await axios.delete(`http://c4216fbecb77.ngrok.io/api/service/catgeorieFood/deleteCategoryFood/${id}`,
       config).then(
         res => {

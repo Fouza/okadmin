@@ -170,14 +170,14 @@ class Exercise extends Component {
     await axios.delete(`http://c4216fbecb77.ngrok.io/api/service/categorieExercise/deleteCategoryExercise/${id}`,
       config).then(
         res => {
-          //console.log(res.data)
-          var array = [...this.state.exoCats];
-          if (index != -1) {
-            array.splice(index, 1);
-            this.setState({
-              exoCats: array
-            });
-          }
+          console.log(res.data)
+          // var array = [...this.state.exoCats];
+          // if (index != -1) {
+          //   array.splice(index, 1);
+          //   this.setState({
+          //     exoCats: array
+          //   });
+          // }
           //this.window.location.refresh();
         }
       );
